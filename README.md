@@ -10,9 +10,6 @@
     <script>
       window.routerBase = "/";
     </script>
-    <script>
-      //! umi version: 3.5.20
-    </script>
   </head>
   <body>
     <div id="root"></div>
