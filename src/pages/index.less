@@ -529,6 +529,67 @@
       }
     }
   }
+  .inputbox{
+    .inputmain{
+      .inputcontent{
+        .inputlefttext{
+          display: inline-flex;
+          width: initial;
+          height: 100%;
+          -webkit-align-items: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          pointer-events: none;
+          margin: 0;
+          padding: 0 8pt;
+          color: #666;
+          background-color: #111;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-top: 1px solid #333;
+          border-left: 1px solid #333;
+          border-bottom: 1px solid #333;
+          font-size: .875rem;
+          line-height: 1;
+        }
+        .inputcontiner{
+          display: inline-flex;
+          vertical-align: middle;
+          -webkit-align-items: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          height: 100%;
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          border-radius: 5px;
+          border: 1px solid #333;
+          -webkit-transition: border 0.2s ease 0s,color 0.2s ease 0s;
+          transition: border 0.2s ease 0s,color 0.2s ease 0s;
+          input{
+            margin: 4px 10px;
+            padding: 0;
+            box-shadow: none;
+            font-size: .875rem;
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            outline: none;
+            border-radius: 0;
+            width: 100%;
+            min-width: 0;
+            -webkit-appearance: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 650px) {

@@ -74,9 +74,9 @@ export default function IndexPage() {
       </header>
       <section className={styles.mainbox}>
         <header>
-          <h2 className={styles.customsize}>DeepLink for imToken</h2>
+          <h2 className={styles.customsize}>DeepLink for hwaToken</h2>
           <p>
-            This is imToken's DeepLink testing tool, you can open and access the
+            This is hwaToken's DeepLink testing tool, you can open and access the
             link on your mobile device to test it. For more information, please
             visit our
             <a
@@ -99,10 +99,10 @@ export default function IndexPage() {
           <div className={styles.resultbox}>
             <div className={styles.resulttop}>
               <a
-                href={'imtokenv2://wallet/' + value}
+                href={'hwanc://wallet/' + value}
                 className={styles.deeplink}
               >
-                {'imtokenv2://wallet/' + value}
+                {'hwanc://wallet/' + value}
               </a>
             </div>
             <div className={styles.copybox}>
