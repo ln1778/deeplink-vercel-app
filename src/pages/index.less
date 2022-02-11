@@ -1,0 +1,550 @@
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #fff;
+  color: #333;
+  transition: color 200ms ease 0ms;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+  .header {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: calc(45.75pt + 1px * 2);
+    z-index: 1;
+    .toggle_threema {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 0 0.9375rem;
+      height: 2rem;
+      line-height: 2rem;
+      min-width: min-content;
+      width: auto;
+      border-radius: 5px;
+      font-weight: 400;
+      font-size: 0.875rem;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      outline: none;
+      text-transform: capitalize;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      color: #888;
+      background-color: transparent;
+      border: 1px solid transparent;
+      cursor: pointer;
+      pointer-events: auto;
+      box-shadow: none;
+      padding: 0 calc(0.8 * 8pt);
+      &:hover,
+      &:focus {
+        color: #888;
+        --geist-ui-button-color: #888;
+        background-color: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        pointer-events: auto;
+        box-shadow: none;
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        -ms-transform: translate3d(0px, 0px, 0px);
+        transform: translate3d(0px, 0px, 0px);
+      }
+    }
+  }
+  .mainbox {
+    width: calc(750pt - 100pt);
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 16pt;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: calc(45.75pt + 1px * 2);
+    .customsize {
+      font-size: 20px;
+      color: inherit;
+      transition: color 200ms ease 0ms;
+    }
+    .link {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-align-items: baseline;
+      -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+      align-items: baseline;
+      line-height: inherit;
+      transition: color 200ms ease 0ms;
+      color: #0070f3;
+    }
+    .space {
+      display: block;
+      height: 1px;
+      width: 1px;
+      margin-left: calc(15.25pt + 1px * 0);
+      margin-top: calc(15.25pt + 1px * 0);
+    }
+    .contentbox {
+      width: 100%;
+      padding: calc(16pt * 2.5) 0;
+      .resultbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .resulttop {
+          flex-grow: 0;
+          max-width: 100%;
+          -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+          display: inherit;
+          justify-content: center;
+          padding: calc(1 * 4pt);
+          .deeplink {
+            color: #3291ff;
+            border-radius: 5px;
+            background-color: rgba(0, 112, 243, 0.1);
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            padding: calc(4pt * 0.8) calc(4pt * 1.7);
+            -ms-flex-align: baseline;
+            align-items: baseline;
+            line-height: inherit;
+            text-decoration: none;
+            width: fit-content;
+            transition: color 200ms ease 0ms;
+          }
+        }
+        .copybox {
+          flex-basis: 100%;
+          display: inherit;
+          flex-grow: 0;
+          max-width: 100%;
+          justify-content: center;
+          padding: calc(1 * 4pt);
+          .copybtn {
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 0 0.625rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            min-width: min-content;
+            width: auto;
+            border-radius: 5px;
+            font-weight: 400;
+            font-size: 0.75rem;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            outline: none;
+            text-transform: capitalize;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-transition: background-color 200ms ease 0ms,
+              box-shadow 200ms ease 0ms, border 200ms ease 0ms,
+              color 200ms ease 0ms;
+            transition: background-color 200ms ease 0ms,
+              box-shadow 200ms ease 0ms, border 200ms ease 0ms,
+              color 200ms ease 0ms;
+            position: relative;
+            overflow: hidden;
+            color: #666;
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            cursor: pointer;
+            pointer-events: auto;
+            box-shadow: none;
+            --geist-ui-button-padding: 0.625rem;
+            --geist-ui-button-height: 1.5rem;
+            --geist-ui-button-color: #666;
+            --geist-ui-button-bg: #fff;
+            .copytext {
+              font-weight: 400;
+              font-size: 0.75rem;
+              text-transform: capitalize;
+              user-select: none;
+              white-space: nowrap;
+              color: #666;
+              cursor: pointer;
+              pointer-events: auto;
+              padding-left: calc(1.5rem / 2 + 0.625rem * 0.5);
+            }
+            &:hover,
+            &:focus {
+              color: #000;
+              --geist-ui-button-color: #000;
+              background-color: #fff;
+              border-color: #000;
+              cursor: pointer;
+              pointer-events: auto;
+              box-shadow: none;
+              -webkit-transform: translate3d(0px, 0px, 0px);
+              -ms-transform: translate3d(0px, 0px, 0px);
+              transform: translate3d(0px, 0px, 0px);
+              .copytext {
+                color: #000;
+                --geist-ui-button-color: #000;
+                background-color: #fff;
+                border-color: #000;
+                cursor: pointer;
+                pointer-events: auto;
+              }
+            }
+          }
+        }
+      }
+      .settingsbox {
+        .hide_divider {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          flex-wrap: nowrap;
+          overflow: scroll;
+          &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+          }
+          .tabitem {
+            align-items: center;
+            line-height: 1.25rem;
+            position: relative;
+            display: flex;
+            user-select: none;
+            transition: all 200ms ease;
+            text-transform: capitalize;
+            font-size: 1rem;
+            white-space: nowrap;
+            margin: 0 calc(0.8 * 8pt);
+            color: #999;
+            padding: 4pt calc(0.65 * 4pt);
+            cursor: pointer;
+            outline: 0;
+            &:after {
+              position: absolute;
+              content: '';
+              bottom: -1px;
+              left: 0;
+              right: 0;
+              width: 100%;
+              height: 2px;
+              -webkit-transform: scaleX(0.75);
+              -ms-transform: scaleX(0.75);
+              transform: scaleX(0.75);
+              background-color: transparent;
+              -webkit-transition: all 200ms ease;
+              transition: all 200ms ease;
+            }
+            &:first-of-type {
+              margin-left: 0;
+            }
+            &.active {
+              color: #000;
+              &:after {
+                background-color: #000;
+                -webkit-transform: scaleX(1);
+                -ms-transform: scaleX(1);
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+        .content {
+          padding-top: 0.625rem;
+          box-sizing: inherit;
+          text-rendering: geometricPrecision;
+          -webkit-tap-highlight-color: transparent;
+          .tabitem {
+            .tabitemmain {
+              justify-content: center;
+              --gaid-gap-unit: calc(2 * 4pt);
+              flex-wrap: wrap;
+              box-sizing: border-box;
+              margin: calc(-1 * var(--gaid-gap-unit));
+              width: calc(100% + var(--gaid-gap-unit) * 2);
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+  .routeritem {
+    margin: 0;
+    box-sizing: border-box;
+    padding: var(--gaid-gap-unit);
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 33.3%;
+    -webkit-flex-basis: 33.3%;
+    -ms-flex-preferred-size: 33.3%;
+    flex-basis: 33.3%;
+    .radioitem {
+      margin: 0;
+      --radio-size: 16px;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      @media only screen and (max-width: 650px) {
+        flex-grow: 0;
+        max-width: 83.33333333333334%;
+        -webkit-flex-basis: 83.33333333333334%;
+        -ms-flex-preferred-size: 83.33333333333334%;
+        flex-basis: 83.33333333333334%;
+      }
+      .radioicon {
+        height: 16px;
+        width: 16px;
+        border-radius: 100%;
+        border: 1px solid #eaeaea;
+        -webkit-transition: all 0.2s ease 0s;
+        transition: all 0.2s ease 0s;
+        position: relative;
+        display: inline-block;
+        -webkit-transform: scale(0.875);
+        -ms-transform: scale(0.875);
+        transform: scale(0.875);
+        margin-right: calc(var(--radio-size) * 0.375);
+        display: block;
+        top: 5px;
+        &.active {
+          &:before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+            transform: scale(0);
+            height: var(--radio-size);
+            width: var(--radio-size);
+            border-radius: 50%;
+            background-color: #000;
+            -webkit-transform: scale(0.875);
+            -ms-transform: scale(0.875);
+            transform: scale(0.875);
+            -webkit-transition: all 0.2s ease 0s;
+            transition: all 0.2s ease 0s;
+          }
+        }
+      }
+      label {
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        color: #333;
+        cursor: pointer;
+        .routeritemdesc {
+          color: #999;
+          font-size: calc(var(--radio-size) * 0.85);
+        }
+      }
+    }
+  }
+  .inputbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .inputtext {
+      font-size: 13px;
+      color: inherit;
+      margin: 1rem 0;
+      line-height: 1.625em;
+    }
+    .inputmain {
+      display: inline-block;
+      width: initial;
+      box-sizing: border-box;
+      -webkit-box-align: center;
+      .inputcontent {
+        display: inline-flex;
+        align-items: center;
+        width: initial;
+        height: calc(1.687 * 16pt);
+        .inputlefttext {
+          display: inline-flex;
+          width: initial;
+          height: 100%;
+          -webkit-align-items: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          pointer-events: none;
+          margin: 0;
+          padding: 0 8pt;
+          color: #888;
+          background-color: #fafafa;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-top: 1px solid #eaeaea;
+          border-left: 1px solid #eaeaea;
+          border-bottom: 1px solid #eaeaea;
+          font-size: 0.875rem;
+          line-height: 1;
+        }
+        .inputcontiner {
+          display: inline-flex;
+          vertical-align: middle;
+          -webkit-align-items: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          height: 100%;
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          border-radius: 5px;
+          border: 1px solid #eaeaea;
+          -webkit-transition: border 0.2s ease 0s, color 0.2s ease 0s;
+          transition: border 0.2s ease 0s, color 0.2s ease 0s;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          input {
+            margin: 4px 10px;
+            padding: 0;
+            box-shadow: none;
+            font-size: 0.875rem;
+            background-color: transparent;
+            border: none;
+            color: #000;
+            outline: none;
+            border-radius: 0;
+            width: 100%;
+            min-width: 0;
+            -webkit-appearance: none;
+          }
+        }
+      }
+    }
+  }
+}
+.dark_threema {
+  background-color: #000;
+  color: #fff;
+  .mainbox {
+    .contentbox {
+      .resultbox {
+        .copybox {
+          .copybtn {
+            background-color: #000;
+            border: 1px solid #333;
+            &:hover,
+            *:focus {
+              color: #fff;
+              --geist-ui-button-color: #fff;
+              background-color: #000;
+              border-color: #fff;
+              cursor: pointer;
+              pointer-events: auto;
+              box-shadow: none;
+              -webkit-transform: translate3d(0px, 0px, 0px);
+              -ms-transform: translate3d(0px, 0px, 0px);
+              transform: translate3d(0px, 0px, 0px);
+              .copytext {
+                color: #fff;
+                --geist-ui-button-color: #fff;
+                background-color: #000;
+                border-color: #fff;
+                cursor: pointer;
+                pointer-events: auto;
+                box-shadow: none;
+                transform: translate3d(0px, 0px, 0px);
+              }
+            }
+          }
+        }
+      }
+      .settingsbox {
+        .hide_divider {
+          .tabitem {
+            color: #999;
+            &.active {
+              color: #fff;
+              &:after {
+                background-color: #fff;
+                -webkit-transform: scaleX(1);
+                -ms-transform: scaleX(1);
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .routeritem {
+    .radioitem {
+      .radioicon {
+        border: 1px solid #333;
+        &.active {
+          &:before {
+            background-color: #fff;
+          }
+        }
+      }
+      label {
+        color: #fff;
+        .routeritemdesc {
+          color: #444;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .tabitemmain {
+    flex-direction: column;
+    .routeritem {
+      width: 100%;
+      flex-direction: column;
+      max-width: 100%;
+      -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      .radioitem {
+        .radioicon {
+        }
+      }
+    }
+  }
+}
