@@ -107,7 +107,7 @@ export default function IndexPage() {
             </div>
             <div className={styles.copybox}>
               <CopyToClipboard
-                text={value}
+                text={'hwanc://wallet/' + value}
                 onCopy={() => message.info('复制成功')}
               >
                 <button className={styles.copybtn}>
