@@ -99,15 +99,15 @@ export default function IndexPage() {
           <div className={styles.resultbox}>
             <div className={styles.resulttop}>
               <a
-                href={'hwanc://wallet/' + value}
+                href={'hwanc://wallet?routeTo=' + value}
                 className={styles.deeplink}
               >
-                {'hwanc://wallet/' + value}
+                {'hwanc://wallet?routeTo=' + value}
               </a>
             </div>
             <div className={styles.copybox}>
               <CopyToClipboard
-                text={'hwanc://wallet/' + value}
+                text={'hwanc://wallet?routeTo=' + value}
                 onCopy={() => message.info('复制成功')}
               >
                 <button className={styles.copybtn}>
