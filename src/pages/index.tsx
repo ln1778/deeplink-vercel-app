@@ -1,13 +1,13 @@
-import styles from './index.less';
-import { useEffect, useState } from 'react';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { message, Alert } from 'antd';
-import classnames from 'classnames';
-import { CopyOutlined } from '@ant-design/icons';
+import styles from "./index.less";
+import { useEffect, useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { message, Alert } from "antd";
+import classnames from "classnames";
+import { CopyOutlined } from "@ant-design/icons";
 
 export default function IndexPage() {
   const [threema, setThreema] = useState(true);
-  const [value, setValue] = useState('Assets');
+  const [value, setValue] = useState("Assets");
   const [isBrow, setIsBrow] = useState(true);
   const [tabkeys, setTabkeys] = useState(1);
   const [childTabKeys, setChildTabKeys] = useState(1);
@@ -18,13 +18,13 @@ export default function IndexPage() {
 
   const isMobileDev = () => {
     let u = navigator.userAgent;
-    if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+    if (u.indexOf("Android") > -1 || u.indexOf("Linux") > -1) {
       //安卓手机
       return true;
-    } else if (u.indexOf('iPhone') > -1) {
+    } else if (u.indexOf("iPhone") > -1) {
       //苹果手机
       return true;
-    } else if (u.indexOf('Windows Phone') > -1) {
+    } else if (u.indexOf("Windows Phone") > -1) {
       //winphone手机
       return true;
     }
@@ -76,9 +76,9 @@ export default function IndexPage() {
         <header>
           <h2 className={styles.customsize}>DeepLink for hwaToken</h2>
           <p>
-            This is hwaToken's DeepLink testing tool, you can open and access the
-            link on your mobile device to test it. For more information, please
-            visit our
+            This is hwaToken's DeepLink testing tool, you can open and access
+            the link on your mobile device to test it. For more information,
+            please visit our
             <a
               href="http://doc.hchains.cn/deep_link.html"
               target="_blank"
@@ -124,12 +124,12 @@ export default function IndexPage() {
                 role="button"
                 className={classnames(
                   styles.tabitem,
-                  tabkeys == 1 && styles.active,
+                  tabkeys == 1 && styles.active
                 )}
                 onClick={() => {
                   setTabkeys(1);
                   setChildTabKeys(1);
-                  setValue('Assets');
+                  setValue("Assets");
                 }}
               >
                 Preset
@@ -138,7 +138,7 @@ export default function IndexPage() {
                 role="button"
                 className={classnames(
                   styles.tabitem,
-                  tabkeys == 2 && styles.active,
+                  tabkeys == 2 && styles.active
                 )}
                 onClick={() => {
                   setTabkeys(2);
@@ -174,13 +174,13 @@ const SelectElem = ({ childTabKeys, onChange }: any) => {
       <div className={styles.tabitemmain}>
         <div
           className={styles.routeritem}
-          onClick={() => onChange(1, 'Assets')}
+          onClick={() => onChange(1, "Assets")}
         >
           <div className={styles.radioitem}>
             <span
               className={classnames(
                 styles.radioicon,
-                childTabKeys == 1 && styles.active,
+                childTabKeys == 1 && styles.active
               )}
             ></span>
             <label>
@@ -193,13 +193,13 @@ const SelectElem = ({ childTabKeys, onChange }: any) => {
         </div>
         <div
           className={styles.routeritem}
-          onClick={() => onChange(2, 'HWADEX')}
+          onClick={() => onChange(2, "HWADEX")}
         >
           <div className={styles.radioitem}>
             <span
               className={classnames(
                 styles.radioicon,
-                childTabKeys == 2 && styles.active,
+                childTabKeys == 2 && styles.active
               )}
             ></span>
             <label>
@@ -213,8 +213,8 @@ const SelectElem = ({ childTabKeys, onChange }: any) => {
           onClick={() =>
             onChange(
               3,
-              'DappView?url=' +
-                encodeURIComponent('https://id.hwanc.net/hwancchat/index.html'),
+              "DappView&url=" +
+                encodeURIComponent("https://id.hwanc.net/hwancchat/index.html")
             )
           }
         >
@@ -222,7 +222,7 @@ const SelectElem = ({ childTabKeys, onChange }: any) => {
             <span
               className={classnames(
                 styles.radioicon,
-                childTabKeys == 3 && styles.active,
+                childTabKeys == 3 && styles.active
               )}
             ></span>
             <label>
